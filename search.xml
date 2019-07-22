@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[hexo食用方法]]></title>
+    <url>%2F2019%2F07%2F13%2Fhexo%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[Hexo 食用方法 萌新的第一篇Blog ! (ง •_•)ง 环境准备 Node.js 下载安装。 Git 下载安装。 安装Hexo. 在命令行依次运行以下指令： 1234$ npm install -g hexo-cli$ hexo init &lt;文件名&gt;$ cd &lt;文件名&gt;$ npm install 接下来输入 1$ hexo s 在浏览器打开http://localhost:4000/ 就是默认的博客设置了。 这个只是本地主机的Blog，如果需要让其他人浏览你的博客则需要上传到github上。 Github 创建 创建Github 账号。 创建repository, 命名为：&lt;Github账号名称&gt;。github.io 安装deployer-git插件，输入 1$ npm install hexo-deployer-git --save 添加SSH key 创建SSH key. 在命令行输入 1$ ssh-keygen -t rsa -C &quot;邮箱地址&quot; 在c盘中搜索SSH 文件夹，打开里面的rsa.pub文件复制里面的SSH key 打开Github的settings，找到 SSH and GPG keys, 点击New SSH key粘贴 修改 _config.yml 文件。在这个文件里找到deployment, 修改成 123456#Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git branch: master 推送至Github在命令行输入 12$ hexo g$ hexo d 浏览器访问地址：http://&lt;Github账号名称&gt;.github.io上传到Github需要花些时间，请耐心等待 博客优化 主题更换 在主题找到自己中意的主题下载到博客目录的 themes 文件夹中 将博客目录中的 _config.yml 文件的 theme 更改成主题名字（原主题名：landscape） 之后都是以next主题为例子 语言更换在主题文件夹中找到 language 可以发现预装的语言包。找到自己选择的语言的文件名，复制并粘贴到博客目录中的 _config.yml 文件里的 language 后面。 标签页和分类页 在主题文件夹找到 menu 可以找到诸个标签 将想要添加的标签前的 # 删掉即可 在命令行输入 1$ hexo n page "标签" 在博客目录中打开source打开刚刚添加的标签里的index.md举例：categories里的index.md更改为： 123title: 分类date: 2019-07-12 18:34:24type: &quot;categories&quot; 头像更换 在主题目录中的config.yml搜索avatar 网上搜索自己喜欢的头像将url粘贴在url那一栏即可 社交连接 打开主题目录的_config.yml文件，搜索social 把自己想要打开的社交连接前面的#删掉并在后面替换成自己的社交连接 友情链接在主题目录中的_config.yml找到blog rolls在links一栏添加自己想要的连接即可 新建文章在博客目录中在命令行输入 1$ hexo n `博客名字` 自主添加标签，分类等 打赏功能 把二维码放进主题目录image文件夹里 进入主题目录中的_config.yml找到reward，将二维码文件名添加上即可 主页阅读全文在文章里将想要给读者在首页看的内容用&lt;--! more --&gt;隔开 添加fork github 在GitHub corner网站找到自己喜欢的样式并将代码复制 在主题目录找到并打开layout找到_layout.swig文件将代码粘贴进去并将url替换成自己的github账号 评论功能 (我使用的是来必力)注册来必力账号 安装来必应看到一大串代码将data-uid后面的uid复制 打开主题目录的_config.yml找到livere_uid将后面的替换即可 搜索功能 在博客目录下输入命令行 1$ npm install hexo-generator-searchdb --save 打开博客配置文件将以下代码加进去 12345search: path: search.xml field: post format: html limit: 10000 打开主题配置文件，搜索local search，将enable后面改成true 统计功能打开主题配置将busuanzi_count后面的enable选项改成true 内容分享打开主题配置将likely后面的enable一栏改成true -载入效果打开主题配置将pace后面的enable一栏改成true，可以在pace_theme后面改成自己喜欢的载入效果]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+</search>
